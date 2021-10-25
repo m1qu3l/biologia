@@ -224,62 +224,21 @@
 
         var res0 = 0;var res1 = 0;var res2 = 0;var res3 = 0;var res4 = 0;var res5 = 0;
 
-        document.querySelector('#resp').addEventListener('click',()=>{
-            
-            if (necrosis1Res.value==1) {
-                res0+= 2;
-                if (res0 >2) { res0-= 2; }
-                necrosis1Res.style.background = 'rgba(75,10,225,0.6)';
-            }else{
-                if (res0<=0) { res0+= 0;}else{res0-= 2;}
-                necrosis1Res.style.background = 'rgba(200,10,55,0.5)';
+        document.querySelector('#resp').addEventListener('click',()=>{if (necrosis1Res.value==1) {res0+= 2;if (res0 >2) { res0-= 2; }necrosis1Res.style.background = 'rgba(75,10,225,0.6)';
+            }else{if (res0<=0) { res0+= 0;}else{res0-= 2;}necrosis1Res.style.background = 'rgba(200,10,55,0.5)';}
+            if (apoptosis2Res.value==2) {res1+= 2;if (res1 >2) { res1-= 2; }apoptosis2Res.style.background = 'rgba(75,10,225,0.6)';
+            }else{if (res1<=0) { res1+= 0;}else{res1-= 2;}apoptosis2Res.style.background = 'rgba(200,10,55,0.5)';}
+            if (nombreImgApoptosis.value == "APOPTOSIS" || nombreImgApoptosis.value == "Apoptosis" || nombreImgApoptosis.value =="apoptosis") {res2+= 1;if (res2 >1) { res2-= 1; }nombreImgApoptosis.style.background = 'rgba(75,10,225,0.6)';
+            }else{if (res2<=0) { res2+= 0;}else{res2-= 1;}nombreImgApoptosis.style.background = 'rgba(200,10,55,0.5)';}
+
+            if (nombreImgNecrosis.value == "NECROSIS" || nombreImgNecrosis.value == "Necrosis" || nombreImgNecrosis.value =="necrosis") {res3+= 1;if (res3 >1) { res3-= 1; }nombreImgNecrosis.style.background = 'rgba(75,10,225,0.6)';
+            }else{if (res3<=0) { res3+= 0;}else{res3-= 1;}nombreImgNecrosis.style.background = 'rgba(200,10,55,0.5)';}
+
+            if (ejmNecrosis.value == "NECROSIS" || ejmNecrosis.value == "Necrosis" || ejmNecrosis.value =="necrosis") {res4+= 2;if (res4 >2) { res4-= 2; }ejmNecrosis.style.background = 'rgba(75,10,225,0.6)';
+            }else{if (res4<=0) { res4+= 0;}else{res4-= 2;}ejmNecrosis.style.background = 'rgba(200,10,55,0.5)';
             }
-
-            if (apoptosis2Res.value==2) {
-                res1+= 2;
-                if (res1 >2) { res1-= 2; }
-                apoptosis2Res.style.background = 'rgba(75,10,225,0.6)';
-            }else{
-                if (res1<=0) { res1+= 0;}else{res1-= 2;}
-                apoptosis2Res.style.background = 'rgba(200,10,55,0.5)';
-            }
-
-            if (nombreImgApoptosis.value == "APOPTOSIS" || nombreImgApoptosis.value == "Apoptosis" || nombreImgApoptosis.value =="apoptosis") {
-                res2+= 1;
-                if (res2 >1) { res2-= 1; }
-                nombreImgApoptosis.style.background = 'rgba(75,10,225,0.6)';
-            }else{
-                if (res2<=0) { res2+= 0;}else{res2-= 1;}
-                nombreImgApoptosis.style.background = 'rgba(200,10,55,0.5)';
-            }
-
-            if (nombreImgNecrosis.value == "NECROSIS" || nombreImgNecrosis.value == "Necrosis" || nombreImgNecrosis.value =="necrosis") {
-                res3+= 1;
-                if (res3 >1) { res3-= 1; }
-                nombreImgNecrosis.style.background = 'rgba(75,10,225,0.6)';
-            }else{
-                if (res3<=0) { res3+= 0;}else{res3-= 1;}
-                nombreImgNecrosis.style.background = 'rgba(200,10,55,0.5)';
-            }
-
-           
-
-            if (ejmNecrosis.value == "NECROSIS" || ejmNecrosis.value == "Necrosis" || ejmNecrosis.value =="necrosis") {
-                res4+= 2;
-                if (res4 >2) { res4-= 2; }
-                ejmNecrosis.style.background = 'rgba(75,10,225,0.6)';
-            }else{
-                if (res4<=0) { res4+= 0;}else{res4-= 2;}
-                ejmNecrosis.style.background = 'rgba(200,10,55,0.5)';
-            }
-
-            if (ejmApoptosis.value == "APOPTOSIS" || ejmApoptosis.value == "Apoptosis" || ejmApoptosis.value =="apoptosis") {
-                res5+= 2;
-                if (res5 >2) { res5-= 2; }
-                ejmApoptosis.style.background = 'rgba(75,10,225,0.6)';
-            }else{
-                if (res5<=0) { res5+= 0;}else{res5-= 2;}
-                ejmApoptosis.style.background = 'rgba(200,10,55,0.5)';
+            if (ejmApoptosis.value == "APOPTOSIS" || ejmApoptosis.value == "Apoptosis" || ejmApoptosis.value =="apoptosis") {res5+= 2;if (res5 >2) { res5-= 2; }ejmApoptosis.style.background = 'rgba(75,10,225,0.6)';
+            }else{if (res5<=0) { res5+= 0;}else{res5-= 2;}ejmApoptosis.style.background = 'rgba(200,10,55,0.5)';
             }
             nota.innerHTML = (res0+res1+res2+res3+res4+res5);
         })
